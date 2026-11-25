@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Cravio | What Are You Craving? • Fast Gourmet Food Delivery</title>
+  <meta name="description" content="Cravio - What are you craving today? Order artisanal pizza, wagyu burgers, ramen, and healthy bowls in Indian Rupees (₹) with rapid 24-minute delivery." />
+
+  <!-- Preconnect to Google Fonts and Unsplash CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  
+  <!-- Modern SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23FF5722'/%3E%3Cpath d='M21 13c-1.5-1.5-3.5-2.2-6-2.2-4.5 0-7.5 3.5-7.5 8s3 8 7.5 8c2.5 0 4.5-.8 6-2.3' stroke='%23FFF' stroke-width='3.5' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='23' cy='10' r='2' fill='%23FFE57F'/%3E%3C/svg%3E" />
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Top Sticky Navigation Bar
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo: CRAVIO -->
+      <a href="#hero-section" class="brand-logo-wrap" aria-label="Cravio Home">
+        <div class="brand-icon-shield">
+          <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cravioGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FF5722"/>
+                <stop offset="55%" stop-color="#E63946"/>
+                <stop offset="100%" stop-color="#F59E0B"/>
+              </linearGradient>
+              <filter id="cravioGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#FF5722" flood-opacity="0.38"/>
+              </filter>
+            </defs>
+            <rect width="48" height="48" rx="14" fill="url(#cravioGrad)" filter="url(#cravioGlow)"/>
+            <!-- Cute Chef Toque Hat -->
+            <path d="M26 9.5C26 8.7 26.7 8 27.5 8C28.3 8 29 8.7 29 9.5C29.6 9.5 30.2 10 30.2 10.7C30.2 11.4 29.6 12 28.8 12H24C23.2 12 22.5 11.4 22.5 10.7C22.5 10 23.1 9.5 23.8 9.5C23.8 8.7 24.5 8 25.3 8C25.6 8 25.8 8.1 26 8.3C26.1 8.1 26.4 8 26.6 8" fill="#FFFFFF"/>
+            <rect x="23" y="12" width="7" height="2" rx="1" fill="#FFFFFF" fill-opacity="0.9"/>
+            <!-- Bold Smiling 'C' Appetite curve -->
+            <path d="M31 19.5C29 17.5 26.2 16.5 23 16.5C17.2 16.5 13 21 13 26.8C13 32.5 17.2 37 23 37C26.5 37 29.5 35.2 31.5 32.5" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+            <!-- Flavor Spark Star -->
+            <path d="M34 14L34.8 16.2L37 17L34.8 17.8L34 20L33.2 17.8L31 17L33.2 16.2L34 14Z" fill="#FFE57F"/>
+            <!-- Cheerful smile tick -->
+            <path d="M21 28C22.5 30 25 30 26.5 28" stroke="#FFE57F" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-name">Cravio <span class="brand-badge">Gourmet</span></span>
+        </div>
+      </a>
+
+      <!-- Location Delivery Zone Pill -->
+      <div class="nav-location-pill" title="Current Delivery Hub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="loc-icon">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>Delivering to: <strong>Cyber Hub & Golf Course Road</strong> (24m)</span>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div class="nav-search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="search" 
+          class="search-food-input" 
+          placeholder="What are you craving? Pizza, wagyu, ramen..." 
+          aria-label="Search culinary items"
+        />
+      </div>
+
+      <!-- Action Buttons (Theme, Wishlist, User Profile, Cart) -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="nav-action-btn" id="theme-toggle-btn" aria-label="Toggle dark and light theme" title="Toggle Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button type="button" class="nav-action-btn btn-open-wishlist" aria-label="Open Saved Favorites" title="Saved Favorites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+
+        <!-- User Profile Pill -->
+        <div class="nav-profile-pill" id="btn-user-profile" title="Account & Past Orders">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="nav-avatar-img" id="nav-user-avatar" />
+          <span class="nav-user-label" id="nav-user-name">Sign In</span>
+        </div>
+
+        <!-- Cart Trigger Button -->
+        <button type="button" class="nav-action-btn btn-open-cart" aria-label="View Shopping Cart" title="Shopping Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge-counter" style="display: none;">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Hero / Catchy & Humanized Banner Section
+       ======================================================================== -->
+  <section class="hero-section" id="hero-section">
+    <div class="container hero-grid">
+      
+      <!-- Left Column: Copy & CTAs -->
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <span>✨ What are you craving today?</span>
+          <span class="dot-separator">•</span>
+          <span>ChefDesk & Magnific Guild</span>
+        </div>
+
+        <h1 class="hero-title">
+          Craving Great Food? <span class="serif-italic">Delivered Hot in 24 Mins</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          From sizzling Wagyu brioche burgers and hot-honey truffle pizzas to slow-simmered Kyoto Tonkotsu ramen. 
+          Cooked to order by top culinary studios like ChefDesk Atelier, Magnific Bistro, and Phygital Labs.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#menu-section" class="btn btn-primary">
+            <span>Satisfy Your Craving</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#promos-section" class="btn btn-secondary">
+            <span>Explore Offers</span>
+            <span class="badge badge-accent">20% OFF</span>
+          </a>
+        </div>
+
+        <!-- Key Highlight Indicators -->
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <h4>24 min</h4>
+            <p>Average dispatch</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>4.95 ★</h4>
+            <p>From 14,000+ happy foodies</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>₹0 Fee</h4>
+            <p>Orders above ₹599</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>100%</h4>
+            <p>Thermal regulated box</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Editorial Visual Card & Floating Micro-Interactions -->
+      <div class="hero-visual-card">
+        <div class="hero-main-photo-wrap">
+          <img 
+            src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&auto=format&fit=crop&q=80" 
+            alt="ChefDesk Signature Wagyu and Artisan Plates" 
+            class="hero-main-photo" 
+          />
+        </div>
+
+        <!-- Floating Card 1: Top Left -->
+        <div class="floating-gourmet-card card-top-left">
+          <div class="floating-icon-wrap">🍔</div>
+          <div class="floating-text">
+            <h5>ChefDesk Wagyu Brioche</h5>
+            <p>★ 4.97 (620 reviews) • ₹599</p>
+          </div>
+        </div>
+
+        <!-- Floating Card 2: Bottom Right -->
+        <div class="floating-gourmet-card card-bottom-right">
+          <div class="floating-icon-wrap" style="background: var(--accent-green);">🛵</div>
+          <div class="floating-text">
+            <h5>Electric Vespa Dispatch</h5>
+            <p>Thermal box locked at 64°C • Arriving in 18m</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. Promotional Vouchers Section
+       ======================================================================== -->
+  <section class="promos-section" id="promos-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">🎟️ Welcoming Perks & Chef Gifts</span>
+          <h2 class="section-title">Special Dining Vouchers</h2>
+          <p class="section-subtitle">Tap any coupon code to instantly copy and apply it to your current order.</p>
+        </div>
+      </div>
+
+      <div class="promos-grid" id="promos-container">
+        <!-- Rendered dynamically by Components.renderPromoCard -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Popular & Curated Restaurants Section
+       ======================================================================== -->
+  <section class="restaurants-section" id="restaurants-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">👨‍🍳 Cravio Partner Kitchens</span>
+          <h2 class="section-title">Top Rated Chef Studios</h2>
+          <p class="section-subtitle">
+            Explore authentic cuisine from top rated kitchens including ChefDesk Atelier, 
+            Magnific Bistro, and Phygital Kitchen Labs.
+          </p>
+        </div>
+      </div>
+
+      <div class="restaurants-grid" id="restaurants-grid">
+        <!-- Rendered dynamically by Components.renderRestaurantCard -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. Interactive Food Menu & Filters Section
+       ======================================================================== -->
+  <section class="menu-section" id="menu-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">🍽️ What are you having?</span>
+          <h2 class="section-title">Explore All Dishes (in ₹)</h2>
+          <p class="section-subtitle">Fresh, wholesome ingredients prepared with genuine culinary care and honest craftsmanship.</p>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills Carousel -->
+      <div class="categories-carousel-wrap">
+        <div class="categories-container" id="categories-container">
+          <!-- Rendered dynamically by Components.renderCategoryPill -->
+        </div>
+      </div>
+
+      <!-- Active Restaurant Filter Notification (if filtered by restaurant) -->
+      <div id="active-restaurant-banner" class="active-restaurant-banner" style="display: none;"></div>
+
+      <!-- Secondary Filter Toolbar (Search, Dietary Tag, Price Slider, Sort) -->
+      <div class="filter-toolbar">
+        <div class="filter-left-controls">
+          <!-- Filter Search Box -->
+          <div class="filter-search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="search" 
+              class="search-food-input" 
+              placeholder="Search by dish or ingredients..." 
+              aria-label="Filter dishes"
+            />
+          </div>
+
+          <!-- Dietary Filter Dropdown -->
+          <select id="dietary-filter" class="filter-select" aria-label="Filter by dietary preference">
+            <option value="all">Dietary: All Profiles</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">100% Vegan</option>
+            <option value="Gluten-Free">Gluten-Free</option>
+            <option value="Spicy">Spicy</option>
+            <option value="High Protein">High Protein</option>
+            <option value="Chef's Special">Chef's Signature</option>
+          </select>
+
+          <!-- Price Slider in Rupees -->
+          <div class="filter-price-slider-wrap">
+            <span>Max Price:</span>
+            <input type="range" id="price-slider" min="150" max="800" step="25" value="750" aria-label="Max Price Slider" />
+            <span id="price-display" style="color: var(--accent-primary);">₹750</span>
+          </div>
+        </div>
+
+        <div class="filter-right-stats">
+          <!-- Sort Dropdown -->
+          <select id="sort-select" class="filter-select" aria-label="Sort dishes">
+            <option value="recommended">Sort: Chef's Recommended</option>
+            <option value="rating">Highest Rated (★ 4.9+)</option>
+            <option value="deliveryTime">Fastest Prep Time</option>
+            <option value="priceAsc">Price: Low to High</option>
+            <option value="priceDesc">Price: High to Low</option>
+            <option value="bestseller">Bestsellers First</option>
+          </select>
+
+          <span class="filtered-results-count" id="filtered-results-count">24 dishes available</span>
+        </div>
+      </div>
+
+      <!-- Food Items Grid -->
+      <div class="food-grid" id="food-grid">
+        <!-- Rendered dynamically by Components.renderFoodCard -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. Testimonials & Social Proof
+       ======================================================================== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">💬 What People Say</span>
+          <h2 class="section-title">Loved by Food Lovers</h2>
+          <p class="section-subtitle">Real experiences from passionate foodies, critics, and everyday diners.</p>
+        </div>
+      </div>
+
+      <div class="testimonials-grid" id="testimonials-container">
+        <!-- Rendered dynamically by Components.renderTestimonial -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div>
+          <div class="brand-logo-wrap">
+            <div class="brand-icon-shield" style="width: 40px; height: 40px;">
+              <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" style="width: 40px; height: 40px;">
+                <rect width="48" height="48" rx="14" fill="url(#cravioGrad)"/>
+                <path d="M31 19.5C29 17.5 26.2 16.5 23 16.5C17.2 16.5 13 21 13 26.8C13 32.5 17.2 37 23 37C26.5 37 29.5 35.2 31.5 32.5" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M34 14L34.8 16.2L37 17L34.8 17.8L34 20L33.2 17.8L31 17L33.2 16.2L34 14Z" fill="#FFE57F"/>
+                <path d="M21 28C22.5 30 25 30 26.5 28" stroke="#FFE57F" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="brand-name">Cravio <span class="brand-badge">Gourmet</span></span>
+          </div>
+          <p class="footer-desc">
+            Engineered with craft, passion, and precision by <strong>SHIKHAR SINGH RANA</strong>. Bringing honest dining, 
+            thermal temperature care, and real-time courier simulation into your home.
+          </p>
+          <div style="display: flex; gap: 12px; color: var(--text-muted); font-size: 0.85rem;">
+            <span>📍 Cyber Hub &amp; Arts District</span>
+            <span class="dot-separator">•</span>
+            <span>⏱️ 11:00 AM - 11:30 PM Daily</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Partner Kitchens</h4>
+          <ul class="footer-links">
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('chefdesk')">ChefDesk Atelier</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('magnific')">Magnific Bistro &amp; Raw Bar</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('phygital')">Phygital Kitchen Labs</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('trattoria')">L'Artisan Trattoria D.O.P.</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('botanist')">The Green Botanist</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'pizza')">Artisan Pizza (from ₹479)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'burgers')">Gourmet Wagyu Burgers (from ₹429)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'healthy')">Superfood Bowls (from ₹419)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'asian')">Kyoto Tonkotsu Ramen (from ₹449)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'desserts')">Pastries &amp; Fondant (from ₹279)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Architect &amp; Craft</h4>
+          <p class="footer-newsletter-text">
+            Designed &amp; Developed by <strong>SHIKHAR SINGH RANA</strong>.<br/>
+            Full-Stack Food Delivery System Architecture.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cravio Inc. • Architect &amp; Developer: <strong>SHIKHAR SINGH RANA</strong>.</p>
+        <p>All prices in Indian Rupees (₹) • White-Glove Thermal Regulated Delivery</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       9. Mobile Bottom Navigation Bar (Visible on mobile viewports)
+       ======================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-inner">
+      <a href="#hero-section" class="mobile-nav-link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Home</span>
+      </a>
+
+      <a href="#restaurants-section" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4M5 21V10.85M19 21V10.85M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+        </svg>
+        <span>Kitchens</span>
+      </a>
+
+      <a href="#menu-section" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        <span>Menu</span>
+      </a>
+
+      <button type="button" class="mobile-nav-link btn-open-wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span>Saved</span>
+      </button>
+
+      <button type="button" class="mobile-nav-link btn-open-cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span>Cart</span>
+        <span class="mobile-nav-badge cart-badge-counter" style="display: none;">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       9. Slide-Over Drawers (Cart & Wishlist)
+       ======================================================================== -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="slide-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <span style="font-size: 1.4rem;">🛍️</span>
+        <h3 class="drawer-title">Your Cravio Cart</h3>
+      </div>
+      <button type="button" class="btn-close-drawer" id="btn-close-cart" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Free Delivery Threshold Meter (₹599) -->
+    <div class="free-delivery-meter-box">
+      <p class="free-delivery-notice" id="free-delivery-progress-notice">
+        Add <strong>₹150</strong> more for <strong>Free Delivery</strong>!
+      </p>
+      <div class="progress-track">
+        <div class="progress-fill" id="free-delivery-progress-bar" style="width: 45%;"></div>
+      </div>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div class="drawer-items-scroll" id="cart-items-container">
+      <!-- Rendered dynamically by Components.renderCartItem -->
+    </div>
+
+    <!-- Drawer Footer (Promo, Tips, Breakdown, Checkout Button) -->
+    <div class="drawer-footer">
+      
+      <!-- Applied Promo Code Notification -->
+      <div id="applied-promo-tag" class="applied-promo-tag" style="display: none;"></div>
+
+      <!-- Voucher Input Form -->
+      <form class="cart-promo-form" id="cart-promo-form">
+        <input type="text" id="cart-promo-input" placeholder="Voucher (e.g. SHIKHAR, CHEF20)" aria-label="Promo code" />
+        <button type="submit" class="btn btn-secondary btn-sm" style="padding: 8px 16px;">Apply</button>
+      </form>
+
+      <!-- Courier Tip Selector in Rupees -->
+      <div class="tip-selector-row">
+        <span class="tip-label">Courier Tip:</span>
+        <div class="tip-pills-wrap">
+          <button type="button" class="tip-pill" data-tip="0">₹0</button>
+          <button type="button" class="tip-pill" data-tip="20">₹20</button>
+          <button type="button" class="tip-pill active" data-tip="30">₹30</button>
+          <button type="button" class="tip-pill" data-tip="50">₹50</button>
+        </div>
+      </div>
+
+      <!-- Price Breakdown in Rupees -->
+      <div class="cart-breakdown-lines">
+        <div class="breakdown-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹0</span>
+        </div>
+        <div class="breakdown-row discount-row" id="cart-discount-row" style="display: none;">
+          <span>Voucher Discount</span>
+          <span id="cart-discount-amount">-₹0</span>
+        </div>
+        <div class="breakdown-row">
+          <span>Delivery Fee</span>
+          <span id="cart-delivery-fee">₹49</span>
+        </div>
+        <div class="breakdown-row">
+          <span>Platform & Tax (8%)</span>
+          <span id="cart-tax">₹0</span>
+        </div>
+        <div class="breakdown-row grand-total-row">
+          <span>Grand Total</span>
+          <span id="cart-total">₹0</span>
+        </div>
+      </div>
+
+      <div class="drawer-actions-row">
+        <button type="button" class="btn btn-secondary" id="btn-clear-cart" title="Clear all items in cart">Clear</button>
+        <button type="button" class="btn btn-primary btn-checkout-full" id="btn-go-to-checkout">
+          Proceed to Checkout &rarr;
+        </button>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Wishlist Drawer -->
+  <aside class="slide-drawer" id="wishlist-drawer" aria-label="Saved Favorites Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <span style="font-size: 1.4rem;">❤️</span>
+        <h3 class="drawer-title">Saved Favorites</h3>
+      </div>
+      <button type="button" class="btn-close-drawer" id="btn-close-wishlist" aria-label="Close saved favorites">&times;</button>
+    </div>
+
+    <div class="drawer-items-scroll" id="wishlist-items-container">
+      <!-- Rendered dynamically by App.renderWishlistDrawer -->
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       10. Native Dialog Modals
+       ======================================================================== -->
+
+  <!-- Food Details Modal -->
+  <dialog id="food-details-modal" aria-labelledby="modal-food-title">
+    <div class="modal-container">
+      <div class="modal-head">
+        <h3>Chef's Dish Details</h3>
+        <button type="button" class="btn-close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-scroll-body" id="food-modal-body">
+        <!-- Rendered dynamically by App.openFoodModal -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Food Ordering Checkout Modal -->
+  <dialog id="checkout-modal" aria-labelledby="checkout-modal-title">
+    <div class="modal-container">
+      <div class="modal-head">
+        <h3 id="checkout-modal-title">Complete Your Cravio Order</h3>
+        <button type="button" class="btn-close-modal" aria-label="Close checkout">&times;</button>
+      </div>
+      <div class="modal-scroll-body">
+        
+        <div class="checkout-grid">
+          <!-- Form Section -->
+          <form id="checkout-form" class="checkout-form-section">
+            
+            <!-- Step 1: Customer Info -->
+            <div class="form-group-card">
+              <h4 class="form-group-title">
+                <span>👤</span> 1. Your Information
+              </h4>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="checkout-name">Full Name *</label>
+                  <input type="text" id="checkout-name" placeholder="e.g. Elena Vance" required />
+                </div>
+                <div class="form-field">
+                  <label for="checkout-phone">Contact Phone (+91) *</label>
+                  <input type="tel" id="checkout-phone" placeholder="e.g. +91 98765 43210" required />
+                </div>
+              </div>
+              <div class="form-col-full">
+                <div class="form-field">
+                  <label for="checkout-email">Email Address (for order receipt) *</label>
+                  <input type="email" id="checkout-email" placeholder="elena@example.com" required />
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Delivery Details -->
+            <div class="form-group-card">
+              <h4 class="form-group-title">
+                <span>📍</span> 2. Delivery Address
+              </h4>
+              <div class="form-col-full">
+                <div class="form-field">
+                  <label for="checkout-address">Delivery Address, Tower / Flat No. *</label>
+                  <input type="text" id="checkout-address" placeholder="e.g. Skyline Towers, Flat 802, Cyber Hub" required />
+                </div>
+              </div>
+              <div class="form-col-full">
+                <div class="form-field">
+                  <label for="checkout-notes">Courier Notes / Gate Instructions</label>
+                  <input type="text" id="checkout-notes" placeholder="e.g. Ring tower buzzer 802, leave at lobby" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Payment Method -->
+            <div class="form-group-card">
+              <h4 class="form-group-title">
+                <span>💳</span> 3. Payment Method
+              </h4>
+              <div class="payment-methods-grid">
+                <label class="payment-radio-card">
+                  <input type="radio" name="payment_method" value="upi" checked />
+                  <span class="pay-card-label">UPI (GPay / PhonePe / Paytm)</span>
+                </label>
+                <label class="payment-radio-card">
+                  <input type="radio" name="payment_method" value="card" />
+                  <span class="pay-card-label">Credit / Debit Card</span>
+                </label>
+                <label class="payment-radio-card">
+                  <input type="radio" name="payment_method" value="netbanking" />
+                  <span class="pay-card-label">Net Banking</span>
+                </label>
+                <label class="payment-radio-card">
+                  <input type="radio" name="payment_method" value="cash" />
+                  <span class="pay-card-label">Cash on Delivery</span>
+                </label>
+              </div>
+
+              <!-- Card Number Simulation -->
+              <div class="form-row" style="margin-top: 14px;">
+                <div class="form-field">
+                  <label>Card / UPI Virtual ID</label>
+                  <input type="text" value="user@okhdfcbank / •••• 8821" readonly style="font-family: monospace;" />
+                </div>
+                <div class="form-field">
+                  <label>Security Verification</label>
+                  <input type="text" value="Instant Auto-Verified ✓" readonly style="color: var(--accent-green); font-weight: 600;" />
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btn-submit-order" style="padding: 16px; font-size: 1.05rem;">
+              Place Order & Pay
+            </button>
+
+          </form>
+
+          <!-- Order Summary Sidebar -->
+          <div class="checkout-sidebar-card">
+            <h4 style="font-size: 1.1rem; margin-bottom: 14px;">Order Summary</h4>
+            <div class="checkout-review-items" id="checkout-summary-items"></div>
+            
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 14px;">
+              <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.25rem;">
+                <span>Total Due</span>
+                <span id="checkout-summary-total">₹0</span>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 8px;">
+                🔒 256-bit SSL encrypted. Includes priority thermal pouch containment.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Order Confirmation & Live Tracking Modal -->
+  <dialog id="order-tracking-modal" aria-labelledby="tracker-heading">
+    <div class="modal-container">
+      <div class="modal-head">
+        <h3 id="tracker-heading">Live Order Status & Concierge GPS</h3>
+        <button type="button" class="btn-close-modal" aria-label="Close tracking">&times;</button>
+      </div>
+      <div class="modal-scroll-body" id="order-tracking-body">
+        <!-- Rendered dynamically by window.DeliveryTracker.renderTracker -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Auth Modal (Sign In / Register) -->
+  <dialog id="auth-modal" aria-labelledby="auth-modal-title">
+    <div class="modal-container" style="max-width: 440px;">
+      <div class="modal-head">
+        <h3 id="auth-modal-title">Member Sign In</h3>
+        <button type="button" class="btn-close-modal" aria-label="Close authentication">&times;</button>
+      </div>
+      <div class="modal-scroll-body">
+        <form id="auth-form" style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="form-field">
+            <label for="auth-name">Your Full Name</label>
+            <input type="text" id="auth-name" placeholder="Gourmet Connoisseur" />
+          </div>
+          <div class="form-field">
+            <label for="auth-email">Email Address *</label>
+            <input type="email" id="auth-email" placeholder="you@domain.in" required />
+          </div>
+          <div class="form-field">
+            <label for="auth-pass">Password *</label>
+            <input type="password" id="auth-pass" placeholder="••••••••" value="password123" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="padding: 12px; margin-top: 8px;">
+            Sign In / Register
+          </button>
+          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">
+            Sign in to auto-fill delivery details and track past order history.
+          </p>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- User Profile & Order History Modal -->
+  <dialog id="profile-modal" aria-labelledby="profile-modal-title">
+    <div class="modal-container" style="max-width: 520px;">
+      <div class="modal-head">
+        <h3 id="profile-modal-title">Diner Profile</h3>
+        <button type="button" class="btn-close-modal" aria-label="Close profile">&times;</button>
+      </div>
+      <div class="modal-scroll-body" id="profile-modal-body">
+        <!-- Rendered dynamically by App.openProfileModal -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Global Toast Notifications Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       Scripts (Loaded in strict modular dependency order)
+       ======================================================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
