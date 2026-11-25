@@ -84,7 +84,7 @@ const App = {
     const activeRestBanner = document.getElementById("active-restaurant-banner");
     if (!container) return;
 
-    const { category, searchQuery, dietaryTag, maxPrice, sortBy, restaurantId } = window.state.filters;
+    const { category, searchQuery, dietaryTag, dietType, maxPrice, sortBy, restaurantId } = window.state.filters;
 
     // Show or hide Active Restaurant Filter Notice
     if (activeRestBanner) {
@@ -104,6 +104,10 @@ const App = {
 
     // Filter pipeline
     let items = APP_DATA.foodItems.filter(item => {
+      // 0. Veg / Non-Veg Segment Filter
+      if (dietType === "veg" && !item.isVeg) return false;
+      if (dietType === "nonveg" && item.isVeg) return false;
+
       // 1. Category Filter
       if (category !== "all" && item.category !== category) return false;
 
@@ -143,7 +147,7 @@ const App = {
     } else if (sortBy === "priceDesc") {
       items.sort((a, b) => b.price - a.price);
     } else if (sortBy === "bestseller") {
-      items.sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0));
+      items.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
     }
 
     // Update Counter
@@ -156,15 +160,51 @@ const App = {
       container.innerHTML = `
         <div class="empty-state">
           <div class="empty-icon">🍽️</div>
-          <h3>No culinary dishes match your criteria</h3>
-          <p>Try adjusting your search keywords, price filter, or dietary preferences.</p>
+          <h3>No Indian dishes match your criteria</h3>
+          <p>Try adjusting your search keywords, price filter, or Veg/Non-Veg toggle.</p>
           <button type="button" class="btn btn-primary" id="btn-reset-filters">Reset All Filters</button>
         </div>
       `;
       return;
     }
 
-    container.innerHTML = items.map(food => Components.renderFoodCard(food)).join("");
+    // Render with Clear Vegetarian vs Non-Vegetarian Separation
+    if (dietType === "veg" || dietType === "nonveg") {
+      container.innerHTML = items.map(food => Components.renderFoodCard(food)).join("");
+    } else {
+      // Both are active: separate into distinct, elegant sections
+      const vegItems = items.filter(i => i.isVeg);
+      const nonVegItems = items.filter(i => !i.isVeg);
+
+      let html = "";
+      if (vegItems.length > 0) {
+        html += `
+          <div class="food-section-separator">
+            <div class="food-section-separator-title">
+              <span class="veg-indicator"></span>
+              <span>Pure Vegetarian Delicacies</span>
+            </div>
+            <span class="food-section-separator-badge">${vegItems.length} items</span>
+          </div>
+        `;
+        html += vegItems.map(food => Components.renderFoodCard(food)).join("");
+      }
+
+      if (nonVegItems.length > 0) {
+        html += `
+          <div class="food-section-separator ${vegItems.length > 0 ? "separator-spaced" : ""}">
+            <div class="food-section-separator-title">
+              <span class="nonveg-indicator"></span>
+              <span>Non-Vegetarian Royal Specialties</span>
+            </div>
+            <span class="food-section-separator-badge">${nonVegItems.length} items</span>
+          </div>
+        `;
+        html += nonVegItems.map(food => Components.renderFoodCard(food)).join("");
+      }
+
+      container.innerHTML = html;
+    }
   },
 
   renderHeroPromos() {
@@ -772,7 +812,18 @@ const App = {
       });
     });
 
-    // 7. Dietary Filter Chips
+    // 7. Veg / Non-Veg Segmented Control
+    const dietSegmentBtns = document.querySelectorAll(".dietary-segment-btn");
+    dietSegmentBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const diet = btn.getAttribute("data-diet");
+        dietSegmentBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        window.state.setFilter("dietType", diet);
+      });
+    });
+
+    // 7.1 Dietary Filter Chips
     const dietarySelect = document.getElementById("dietary-filter");
     if (dietarySelect) {
       dietarySelect.addEventListener("change", e => {
@@ -880,6 +931,9 @@ const App = {
         if (sortSelect) sortSelect.value = "recommended";
         if (dietarySelect) dietarySelect.value = "all";
         searchInputs.forEach(i => (i.value = ""));
+        document.querySelectorAll(".dietary-segment-btn").forEach(b => {
+          b.classList.toggle("active", b.getAttribute("data-diet") === "all");
+        });
         return;
       }
 

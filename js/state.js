@@ -40,7 +40,8 @@ class AppState {
       category: "all",
       searchQuery: "",
       dietaryTag: "all",
-      maxPrice: 750,
+      dietType: "all", // "all", "veg", or "nonveg"
+      maxPrice: 800,
       sortBy: "recommended",
       restaurantId: null
     };
@@ -269,7 +270,8 @@ class AppState {
       category: "all",
       searchQuery: "",
       dietaryTag: "all",
-      maxPrice: 750,
+      dietType: "all",
+      maxPrice: 800,
       sortBy: "recommended",
       restaurantId: null
     };

@@ -139,21 +139,21 @@
         <div class="hero-badge-pill">
           <span>✨ What are you craving today?</span>
           <span class="dot-separator">•</span>
-          <span>ChefDesk & Magnific Guild</span>
+          <span>Bukhara &amp; Dum Pukht Heritage</span>
         </div>
 
         <h1 class="hero-title">
-          Craving Great Food? <span class="serif-italic">Delivered Hot in 24 Mins</span>.
+          Craving Royal Flavors? <span class="serif-italic">Delivered Hot in 24 Mins</span>.
         </h1>
 
         <p class="hero-subtitle">
-          From sizzling Wagyu brioche burgers and hot-honey truffle pizzas to slow-simmered Kyoto Tonkotsu ramen. 
-          Cooked to order by top culinary studios like ChefDesk Atelier, Magnific Bistro, and Phygital Labs.
+          From slow-dum Awadhi mutton biryanis, velvety 24-hour Dal Bukhara, and charcoal-grilled tandoori kebabs 
+          to crispy ghee roast dosas and artisanal Chandni Chowk mithai. Separated into Pure Veg and Non-Veg royal menus.
         </p>
 
         <div class="hero-cta-group">
           <a href="#menu-section" class="btn btn-primary">
-            <span>Satisfy Your Craving</span>
+            <span>Explore Royal Menu</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -161,7 +161,7 @@
           </a>
           <a href="#promos-section" class="btn btn-secondary">
             <span>Explore Offers</span>
-            <span class="badge badge-accent">20% OFF</span>
+            <span class="badge badge-accent">ROYAL20</span>
           </a>
         </div>
 
@@ -190,27 +190,27 @@
       <div class="hero-visual-card">
         <div class="hero-main-photo-wrap">
           <img 
-            src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&auto=format&fit=crop&q=80" 
-            alt="ChefDesk Signature Wagyu and Artisan Plates" 
+            src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=1000&auto=format&fit=crop&q=80" 
+            alt="Royal Awadhi Dum Biryani in Clay Handi" 
             class="hero-main-photo" 
           />
         </div>
 
         <!-- Floating Card 1: Top Left -->
         <div class="floating-gourmet-card card-top-left">
-          <div class="floating-icon-wrap">🍔</div>
+          <div class="floating-icon-wrap" style="background: rgba(34, 197, 94, 0.2);">🟢</div>
           <div class="floating-text">
-            <h5>ChefDesk Wagyu Brioche</h5>
-            <p>★ 4.97 (620 reviews) • ₹599</p>
+            <h5>Dal Bukhara &amp; Garlic Naan</h5>
+            <p>100% Pure Veg • ★ 4.97 (890 reviews)</p>
           </div>
         </div>
 
         <!-- Floating Card 2: Bottom Right -->
         <div class="floating-gourmet-card card-bottom-right">
-          <div class="floating-icon-wrap" style="background: var(--accent-green);">🛵</div>
+          <div class="floating-icon-wrap" style="background: rgba(239, 68, 68, 0.2);">🔴</div>
           <div class="floating-text">
-            <h5>Electric Vespa Dispatch</h5>
-            <p>Thermal box locked at 64°C • Arriving in 18m</p>
+            <h5>Awadhi Dum Gosht Biryani</h5>
+            <p>Sealed Clay Handi • Piping Hot in 24m</p>
           </div>
         </div>
       </div>
@@ -245,10 +245,10 @@
       <div class="section-head">
         <div>
           <span class="section-tag">👨‍🍳 Cravio Partner Kitchens</span>
-          <h2 class="section-title">Top Rated Chef Studios</h2>
+          <h2 class="section-title">Iconic Indian Culinary Houses</h2>
           <p class="section-subtitle">
-            Explore authentic cuisine from top rated kitchens including ChefDesk Atelier, 
-            Magnific Bistro, and Phygital Kitchen Labs.
+            Explore heritage dining from legendary Indian houses including Bukhara &amp; Dum Pukht, 
+            Sattvik Shakahari Haveli (100% Veg), Dastan Tandoor, Punjab Grill, and Dakshin Coastal.
           </p>
         </div>
       </div>
@@ -266,9 +266,9 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <span class="section-tag">🍽️ What are you having?</span>
-          <h2 class="section-title">Explore All Dishes (in ₹)</h2>
-          <p class="section-subtitle">Fresh, wholesome ingredients prepared with genuine culinary care and honest craftsmanship.</p>
+          <span class="section-tag">🇮🇳 Royal Indian Culinary Traditions</span>
+          <h2 class="section-title">Explore Indian Delicacies (in ₹)</h2>
+          <p class="section-subtitle">Authentic Awadhi dum handis, tandoor kebabs, desi ghee curries, and traditional mithai with distinct Pure Veg and Non-Veg selections.</p>
         </div>
       </div>
 
@@ -282,7 +282,7 @@
       <!-- Active Restaurant Filter Notification (if filtered by restaurant) -->
       <div id="active-restaurant-banner" class="active-restaurant-banner" style="display: none;"></div>
 
-      <!-- Secondary Filter Toolbar (Search, Dietary Tag, Price Slider, Sort) -->
+      <!-- Secondary Filter Toolbar (Search, Veg/Non-Veg Segment, Dietary Tag, Price Slider, Sort) -->
       <div class="filter-toolbar">
         <div class="filter-left-controls">
           <!-- Filter Search Box -->
@@ -294,27 +294,40 @@
             <input 
               type="search" 
               class="search-food-input" 
-              placeholder="Search by dish or ingredients..." 
+              placeholder="Search biryani, paneer, kebabs..." 
               aria-label="Filter dishes"
             />
+          </div>
+
+          <!-- Veg / Non-Veg Segmented Control (Separates Vegetarian & Non-Vegetarian) -->
+          <div class="dietary-segmented-control" role="group" aria-label="Vegetarian / Non-Vegetarian selector">
+            <button type="button" class="dietary-segment-btn active" data-diet="all" title="Show All Indian Dishes">
+              <span>🍽️</span> All
+            </button>
+            <button type="button" class="dietary-segment-btn veg-btn" data-diet="veg" title="Show Pure Vegetarian Dishes Only">
+              <span class="veg-indicator"></span> <span>🟢 Pure Veg</span>
+            </button>
+            <button type="button" class="dietary-segment-btn nonveg-btn" data-diet="nonveg" title="Show Non-Vegetarian Dishes Only">
+              <span class="nonveg-indicator"></span> <span>🔴 Non-Veg</span>
+            </button>
           </div>
 
           <!-- Dietary Filter Dropdown -->
           <select id="dietary-filter" class="filter-select" aria-label="Filter by dietary preference">
             <option value="all">Dietary: All Profiles</option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="Vegan">100% Vegan</option>
-            <option value="Gluten-Free">Gluten-Free</option>
-            <option value="Spicy">Spicy</option>
+            <option value="Bestseller">Bestsellers</option>
+            <option value="Tandoori">Clay Tandoori</option>
+            <option value="Saffron Dum">Saffron Dum</option>
             <option value="High Protein">High Protein</option>
-            <option value="Chef's Special">Chef's Signature</option>
+            <option value="Slow Cooked">Slow Cooked</option>
+            <option value="Street Classic">Street Classic</option>
           </select>
 
           <!-- Price Slider in Rupees -->
           <div class="filter-price-slider-wrap">
             <span>Max Price:</span>
-            <input type="range" id="price-slider" min="150" max="800" step="25" value="750" aria-label="Max Price Slider" />
-            <span id="price-display" style="color: var(--accent-primary);">₹750</span>
+            <input type="range" id="price-slider" min="150" max="800" step="25" value="800" aria-label="Max Price Slider" />
+            <span id="price-display" style="color: var(--accent-primary);">₹800</span>
           </div>
         </div>
 
@@ -393,22 +406,22 @@
         <div>
           <h4 class="footer-title">Partner Kitchens</h4>
           <ul class="footer-links">
-            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('chefdesk')">ChefDesk Atelier</a></li>
-            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('magnific')">Magnific Bistro &amp; Raw Bar</a></li>
-            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('phygital')">Phygital Kitchen Labs</a></li>
-            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('trattoria')">L'Artisan Trattoria D.O.P.</a></li>
-            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('botanist')">The Green Botanist</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('bukhara')">Bukhara &amp; Dum Pukht Heritage</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('sattvik')">Sattvik Shakahari Haveli (100% Veg)</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('dastan')">Dastan Kebab &amp; Tandoor Atelier</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('punjab')">Punjab Grill &amp; Dhaba Luxe</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('dakshin')">Dakshin Coastal &amp; Spice Villa</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-title">Categories</h4>
+          <h4 class="footer-title">Indian Specialties</h4>
           <ul class="footer-links">
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'pizza')">Artisan Pizza (from ₹479)</a></li>
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'burgers')">Gourmet Wagyu Burgers (from ₹429)</a></li>
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'healthy')">Superfood Bowls (from ₹419)</a></li>
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'asian')">Kyoto Tonkotsu Ramen (from ₹449)</a></li>
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'desserts')">Pastries &amp; Fondant (from ₹279)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'biryani')">Awadhi Dum Biryani (from ₹419)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'tandoor')">Tandoori Kebabs &amp; Tikkas (from ₹339)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'curries')">Royal Curries &amp; Dal (from ₹379)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'southindian')">Mysore Ghee Roast Dosas (from ₹279)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'desserts')">Kesar Mithai &amp; Rasmalai (from ₹229)</a></li>
           </ul>
         </div>
 

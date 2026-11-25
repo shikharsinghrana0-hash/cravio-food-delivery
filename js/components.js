@@ -107,12 +107,17 @@ const Components = {
     const isFav = window.state.isFavorite(food.id);
     const cartQty = window.state.getCartItemQuantity(food.id);
 
+    // Indian Veg / Non-Veg Indicator Badge
+    const vegBadge = food.isVeg
+      ? `<span class="veg-badge-pill" title="Pure Vegetarian"><span class="veg-indicator"></span> <span>VEG</span></span>`
+      : `<span class="nonveg-badge-pill" title="Non-Vegetarian"><span class="nonveg-indicator"></span> <span>NON-VEG</span></span>`;
+
     // Dietary labels with badges
     const dietaryBadges = food.dietary.map(tag => {
       let cssClass = "tag-default";
-      if (tag.includes("Vegetarian") || tag.includes("Vegan")) cssClass = "tag-green";
-      if (tag.includes("Spicy")) cssClass = "tag-red";
-      if (tag.includes("Chef") || tag.includes("Special")) cssClass = "tag-gold";
+      if (tag.includes("Vegetarian") || tag.includes("Vegan") || tag.includes("Pure Veg")) cssClass = "tag-green";
+      if (tag.includes("Non-Veg") || tag.includes("Spicy")) cssClass = "tag-red";
+      if (tag.includes("Chef") || tag.includes("Special") || tag.includes("Royal") || tag.includes("Dum") || tag.includes("Bukhara")) cssClass = "tag-gold";
       if (tag.includes("Bestseller")) cssClass = "tag-bestseller";
       return `<span class="dietary-badge ${cssClass}">${tag}</span>`;
     }).join("");
@@ -159,6 +164,7 @@ const Components = {
 
         <div class="food-body">
           <div class="food-dietary-row">
+            ${vegBadge}
             ${dietaryBadges}
           </div>
 
