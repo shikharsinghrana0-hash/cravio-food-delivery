@@ -3,10 +3,22 @@ const path = require('path');
 const fs = require('fs');
 
 const CHROME_PATH = '/Users/shikharsinghrana/.cache/puppeteer/chrome/mac_arm-157.0.8103.78/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing';
-const OUTPUT_DIR = path.join(__dirname, '..', 'screenshot');
+const OUTPUT_DIRS = [
+  path.join(__dirname, '..', 'screenshot'),
+  path.join(__dirname, '..', 'screenshots')
+];
 
-if (!fs.existsSync(OUTPUT_DIR)) {
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+OUTPUT_DIRS.forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+});
+
+async function saveScreenshots(page, filename, options = {}) {
+  for (const dir of OUTPUT_DIRS) {
+    const dest = path.join(dir, filename);
+    await page.screenshot({ path: dest, ...options });
+  }
 }
 
 async function capture() {
@@ -22,27 +34,30 @@ async function capture() {
   // 1. Desktop Full Viewport & Hero
   console.log('Capturing Desktop Hero & Navigation...');
   await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
-  await page.goto('http://localhost:8081', { waitUntil: 'networkidle0', timeout: 30000 });
+  await page.goto('http://localhost:8080', { waitUntil: 'networkidle0', timeout: 30000 });
   await new Promise(r => setTimeout(r, 1000));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, '01-desktop-hero.png') });
+  await saveScreenshots(page, '01-desktop-hero.png');
 
   // 2. Desktop Restaurants / Kitchens Section
   console.log('Capturing Partner Kitchens section...');
   const restaurantsEl = await page.$('#restaurants-section');
   if (restaurantsEl) {
-    await restaurantsEl.screenshot({ path: path.join(OUTPUT_DIR, '02-desktop-restaurants.png') });
+    for (const dir of OUTPUT_DIRS) {
+      await restaurantsEl.screenshot({ path: path.join(dir, '02-desktop-restaurants.png') });
+    }
   }
 
   // 3. Desktop Food Menu & Filter Toolbar
   console.log('Capturing Food Menu and Filters...');
   const menuEl = await page.$('#menu-section');
   if (menuEl) {
-    await menuEl.screenshot({ path: path.join(OUTPUT_DIR, '03-desktop-food-menu.png') });
+    for (const dir of OUTPUT_DIRS) {
+      await menuEl.screenshot({ path: path.join(dir, '03-desktop-food-menu.png') });
+    }
   }
 
   // 4. Slide-out Cart Drawer with Items
   console.log('Capturing Cart Drawer with Indian Rupees calculation...');
-  // Add a couple items to cart via quickAddToCart
   await page.evaluate(() => {
     if (window.App && window.App.quickAddToCart) {
       window.App.quickAddToCart('piz-veg-01');
@@ -51,7 +66,7 @@ async function capture() {
     }
   });
   await new Promise(r => setTimeout(r, 600));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, '04-desktop-cart-drawer.png') });
+  await saveScreenshots(page, '04-desktop-cart-drawer.png');
 
   // Close cart drawer
   await page.evaluate(() => {
@@ -69,7 +84,7 @@ async function capture() {
     }
   });
   await new Promise(r => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, '05-live-order-tracking.png') });
+  await saveScreenshots(page, '05-live-order-tracking.png');
 
   // Close modal
   await page.evaluate(() => {
@@ -82,19 +97,21 @@ async function capture() {
   console.log('Capturing Footer with clean Architect & Developer attribution...');
   const footerEl = await page.$('.site-footer');
   if (footerEl) {
-    await footerEl.screenshot({ path: path.join(OUTPUT_DIR, '06-footer-developer-attribution.png') });
+    for (const dir of OUTPUT_DIRS) {
+      await footerEl.screenshot({ path: path.join(dir, '06-footer-developer-attribution.png') });
+    }
   }
 
   // 7. Full-Page Scrollable Capture
   console.log('Capturing Full-Page Desktop view...');
-  await page.screenshot({ path: path.join(OUTPUT_DIR, '07-full-page-desktop.png'), fullPage: true });
+  await saveScreenshots(page, '07-full-page-desktop.png', { fullPage: true });
 
   // 8. Mobile iPhone View (390 x 844) with Bottom Navigation Bar
   console.log('Capturing Mobile iPhone View with Mobile Bottom Navigation Bar...');
   await page.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
-  await page.goto('http://localhost:8081', { waitUntil: 'networkidle0', timeout: 30000 });
+  await page.goto('http://localhost:8080', { waitUntil: 'networkidle0', timeout: 30000 });
   await new Promise(r => setTimeout(r, 1000));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, '08-mobile-iphone-homepage.png') });
+  await saveScreenshots(page, '08-mobile-iphone-homepage.png');
 
   // 9. Mobile Food Menu view
   console.log('Capturing Mobile Food Menu view...');
@@ -103,12 +120,12 @@ async function capture() {
     if (el) el.scrollIntoView();
   });
   await new Promise(r => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, '09-mobile-iphone-menu.png') });
+  await saveScreenshots(page, '09-mobile-iphone-menu.png');
 
   // 10. Trending & Artisan Sourdough Pizzas View (Desktop)
   console.log('Capturing Trending Pizzas & Coffees view...');
   await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
-  await page.goto('http://localhost:8081', { waitUntil: 'networkidle0', timeout: 30000 });
+  await page.goto('http://localhost:8080', { waitUntil: 'networkidle0', timeout: 30000 });
   await page.evaluate(() => {
     if (window.state && window.state.setFilter) {
       window.state.setFilter('category', 'trending');
@@ -117,9 +134,9 @@ async function capture() {
     if (el) el.scrollIntoView();
   });
   await new Promise(r => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, '10-trending-and-pizzas.png') });
+  await saveScreenshots(page, '10-trending-and-pizzas.png');
 
-  console.log('All screenshots captured successfully!');
+  console.log('All screenshots captured successfully into screenshot/ and screenshots/ !');
   await browser.close();
 }
 

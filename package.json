@@ -4,8 +4,8 @@
   "description": "Cravio - What Are You Craving Today? Developed by Shikhar Singh Rana.",
   "main": "index.html",
   "scripts": {
-    "start": "python3 -m http.server 3000",
-    "serve": "npx serve -l 3000 ."
+    "start": "python3 server.py",
+    "serve": "python3 server.py"
   },
   "keywords": [
     "food-delivery",

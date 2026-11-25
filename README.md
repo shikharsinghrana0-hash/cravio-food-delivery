@@ -1,118 +1,128 @@
-# Cravio | Royal Indian Feasts, Artisan Pizzas & Trending Specialty Brews
-### Lead Architect & Developer: **SHIKHAR SINGH RANA**
+# 🍽️ Cravio | What Are You Craving Today?
 
-**Cravio** is a modern, high-energy Food Delivery Application showcasing **authentic Indian fine dining** (Bukhara, Dum Pukht, Punjab Grill, Dakshin) alongside **artisan 48-hour sourdough pizzas**, **third-wave specialty coffees**, and **viral trending eats & sips** inspired by **Pinterest editorial aesthetics**.
+> **Lead Architect & Developer**: **SHIKHAR SINGH RANA**  
+> **Repository**: [https://github.com/shikharsinghrana0-hash/cravio-food-delivery](https://github.com/shikharsinghrana0-hash/cravio-food-delivery)  
+> **Live Local Port**: [http://localhost:8080](http://localhost:8080)
 
-Built with pure, modern HTML5, CSS3 design tokens, and vanilla ES6+ modular JavaScript. Features a comprehensive **Pure Vegetarian (🟢) vs. Non-Vegetarian (🔴)** dual-curation engine with distinct visual segregation, authentic Indian food marks, dynamic in-card quantity steppers, live HTML5 Canvas 2D GPS courier simulation, and real-time pricing in **Indian Rupees (₹)**.
+**Cravio** is a modern, high-energy, and responsive Food Delivery System website inspired by **ChefDesk**, **Magnific Bistro**, **Phygital Kitchen Labs**, and **Pinterest fine-dining editorial aesthetics**.
+
+Built with pure, modern HTML5, CSS3 tokens, and modular vanilla ES6+ JavaScript. Works instantly in any browser with **zero external framework dependencies, zero build steps, and full offline/local compatibility**. All menu items, delivery charges, tips, and discounts are calculated dynamically in **Indian Rupees (₹)**.
 
 ---
 
 ## 📸 Screenshots Gallery
 
-All high-resolution application screenshots are saved in the [`screenshot/`](./screenshot) directory:
+All visual assets and high-resolution interface captures are available in the [`screenshots/`](./screenshots/) and [`screenshot/`](./screenshot/) folders.
 
-| Screenshot | Description | Preview |
-| :--- | :--- | :--- |
-| **01-desktop-hero.png** | Editorial Hero visual, instant search bar, floating live dishes & quick stats | [View Screenshot](./screenshot/01-desktop-hero.png) |
-| **02-desktop-restaurants.png** | Curated Partner Kitchens (Bukhara, Sattvik Pure Veg, Crust & Craft Pizzas, Third Wave Roastery) | [View Screenshot](./screenshot/02-desktop-restaurants.png) |
-| **03-desktop-food-menu.png** | Food menu with 3-way Veg/Non-Veg segmented toggle switch and dual section separation | [View Screenshot](./screenshot/03-desktop-food-menu.png) |
-| **04-desktop-cart-drawer.png** | Slide-out cart drawer with itemized Indian Rupee (₹) calculations & free delivery meter | [View Screenshot](./screenshot/04-desktop-cart-drawer.png) |
-| **05-live-order-tracking.png** | 4-Stage order tracking modal with animated HTML5 Canvas 2D GPS road simulation | [View Screenshot](./screenshot/05-live-order-tracking.png) |
-| **06-footer-developer-attribution.png** | Clean Footer with simple architect & developer attribution for **SHIKHAR SINGH RANA** | [View Screenshot](./screenshot/06-footer-developer-attribution.png) |
-| **07-full-page-desktop.png** | Complete full-length scrollable capture of the desktop website | [View Screenshot](./screenshot/07-full-page-desktop.png) |
-| **08-mobile-iphone-homepage.png** | iPhone responsive mobile view with fixed Glassmorphism Mobile Bottom Navigation Bar | [View Screenshot](./screenshot/08-mobile-iphone-homepage.png) |
-| **09-mobile-iphone-menu.png** | Mobile food menu view with responsive touch controls & Veg/Non-Veg indicators | [View Screenshot](./screenshot/09-mobile-iphone-menu.png) |
-| **10-trending-and-pizzas.png** | Viral & Trending category with sourdough pizzas, Spanish latte & Dubai chocolate | [View Screenshot](./screenshot/10-trending-and-pizzas.png) |
+### 1. Desktop Experience & Hero Banner
+*Captures brand mascot logo, live delivery hub zone, headline, quick search bar, and key trust metrics.*
+![Desktop Hero & Navigation](./screenshots/01-desktop-hero.png)
 
----
+### 2. Partner Kitchens Showcase (ChefDesk, Magnific, Phygital)
+*Curated culinary partners with ratings, tags, delivery estimates, and price indicators.*
+![Partner Kitchens](./screenshots/02-desktop-restaurants.png)
 
-## 🍕 Trending Foods, Artisan Pizzas & Specialty Coffees
+### 3. Food Menu, Category Carousel & Real-Time Filter Toolbar
+*Multi-facet filtering: instant keyword search, category pills, price slider (₹150 - ₹1200), and dietary tags.*
+![Food Menu & Filters](./screenshots/03-desktop-food-menu.png)
 
-Cravio features a hand-curated menu of 39 gourmet creations (24 Pure Veg, 15 Non-Veg) across 11 categories:
+### 4. Interactive Slide-Out Cart Drawer
+*Dynamic item stepper (`- [qty] +`), promo voucher applicator, chef note input, and live ₹ order calculation.*
+![Cart Drawer](./screenshots/04-desktop-cart-drawer.png)
 
-### 🍕 Artisan Sourdough Pizzas
-- **Truffle Burrata & Wild Mushroom Sourdough Pizza (🟢 Veg)**: 48h slow-fermented wild sourdough, whole fresh burrata, black summer truffle oil, roasted wild shiitake, and San Marzano tomatoes.
-- **Classic Margherita di Bufala D.O.P. (🟢 Veg)**: Slow-fermented sourdough, fresh buffalo mozzarella, crushed San Marzano D.O.P. tomatoes, extra virgin olive oil, and organic Genovese basil.
-- **Spicy Artisanal Pepperoni & Hot Honey Sourdough (🔴 Non-Veg)**: Wood-fired sourdough, cured artisanal pork/chicken pepperoni slices, fior di latte mozzarella, and spicy chili wildflower hot honey.
-- **Smoked Butter Chicken & Confit Garlic Sourdough (🔴 Non-Veg)**: Charcoal-smoked tandoori chicken chunks, rich makhani glaze, red onions, charred bell peppers, and fresh cilantro.
+### 5. Live GPS Order Tracking with Canvas 2D Route Simulation
+*Real-time 4-stage stepper, animated courier driver route across city road network, and driver contact cards.*
+![Order Tracking](./screenshots/05-live-order-tracking.png)
 
-### ☕ Specialty Coffees & Cold Brews
-- **Iced Spanish Pistachio Latte (🟢 Veg)**: Double shot of single-origin Chikmagalur espresso, condensed milk, chilled oat milk, and roasted Iranian pistachio cream.
-- **Slow-Steeped Lotus Biscoff Cold Brew (🟢 Veg)**: 18-hour cold steeped Arabica, salted caramel syrup, oat milk, crowned with Lotus Biscoff biscuit spread foam.
-- **Vietnamese Condensed Milk Phin Drip (🟢 Veg)**: Dark roasted Robusta brewed through a traditional metal Phin filter over sweet condensed milk on ice.
-- **Uji Ceremonial Matcha & Strawberry Cloud (🟢 Veg)**: First-harvest ceremonial grade Uji matcha whisked over crushed strawberry purée and whipped coconut cream.
+### 6. Mobile iPhone Experience with Fixed Bottom Navigation Bar
+*Fully responsive on mobile phones (≤640px) featuring a thumb-friendly glassmorphic 5-tab bottom navigation.*
+<p align="center">
+  <img src="./screenshots/08-mobile-iphone-homepage.png" width="45%" alt="Mobile Homepage" />
+  &nbsp;&nbsp;
+  <img src="./screenshots/09-mobile-iphone-menu.png" width="45%" alt="Mobile Menu" />
+</p>
 
-### 🔥 Viral Trending Bites & Drinks
-- **Korean Cream Cheese Pull-Apart Brioche (🟢 Veg)**: Soft Japanese milk bread buns drenched in sweet whipped cream cheese, roasted garlic parsley butter, and toasted sesame.
-- **Dubai Viral Kunafa Pistachio Chocolate Fondant (🟢 Veg)**: Crisp butter-toasted shredded kunafa phyllo pastry filled with pistachio cream paste and enrobed in 70% dark Belgian chocolate ganache.
-- **Parmesan & Truffle Loaded Fries (🟢 Veg)**: Triple-cooked skin-on potato frites tossed in white truffle oil, freshly grated 24-month Parmigiano-Reggiano, and garlic aioli.
-- **Tiger Brown Sugar Boba Fresh Milk (🟢 Veg)**: Warm slow-cooked chewy tapioca pearls in dark muscovado brown sugar syrup with iced milk and roasted cream cheese cap.
-- **Nashville Hot Chicken Brioche Sliders (🔴 Non-Veg)**: Ultra-crispy double-fried buttermilk chicken thigh dipped in cayenne spiced oil with sweet dill pickles and smoky comeback sauce.
-- **Korean Crispy Gochujang Sticky Wings (🔴 Non-Veg)**: Twice-fried crispy wings coated in sticky honey gochujang glaze with toasted sesame and pickled daikon radish.
-- **Double Wagyu Truffle Smash Burger (🔴 Non-Veg)**: Two smashed beef/lamb patties with crispy lace edges, melted aged gouda, black truffle emulsion, and caramelized onions on potato bun.
+### 7. Clean Developer & Architect Attribution
+*Presented at the very end of the page ("at last") with clean typography and no clutter.*
+![Footer Attribution](./screenshots/06-footer-developer-attribution.png)
 
 ---
 
-## 🌿 Pure Vegetarian & 🍖 Non-Vegetarian Separation
+## 💡 Why the Name "CRAVIO"?
 
-- **Universal Indian Food Marks**: Every dish card features standard green square-and-dot (`🟢 Veg`) or red square-and-dot (`🔴 Non-Veg`) badges.
-- **3-Way Dedicated Segmented Control**:
-  - `[ 🍽️ All ]`: Displays all dishes under segregated, styled section banners (`🌿 Pure Vegetarian Delicacies` and `🍗 Non-Vegetarian Royal Specialties`) with dynamic item counters.
-  - `[ 🟢 Pure Veg ]`: Filters exclusively pure vegetarian options (24 dishes).
-  - `[ 🔴 Non-Veg ]`: Filters exclusively non-vegetarian gourmet options (17 dishes).
-- **100% Pure Veg Kitchens**: Dedicated partner kitchen *Sattvik Shakahari Haveli* ensuring zero cross-contact.
-
----
-
-## 🇮🇳 Royal Heritage Indian Delicacies
-- **Awadhi Dum Gosht Biryani (🔴 Non-Veg)**: Spring goat meat layered with aged Basmati, saffron, ittar, and caramelized onions sealed in a clay handi.
-- **Dal Bukhara (🟢 Veg)**: Whole black lentils slow-simmered over charcoal embers for 24 continuous hours with churned butter and vine-ripened tomatoes.
-- **Lucknowi Galouti Kebab (🔴 Non-Veg)**: Melt-in-mouth smoked lamb patties blended with 160 secret royal Awadhi potli spices.
-- **Mysore Ghee Roast Masala Dosa (🟢 Veg)**: Fermented rice crepe smeared with fiery red garlic chutney and spiced potato masala cooked in A2 desi cow ghee.
-- **Royal Angoori Rasmalai (🟢 Veg)**: Delicate cottage cheese spheres soaked in saffron clotted milk rabri with Iranian pistachios.
+- **Rolls Off Everyone's Tongue**: When people get hungry, their immediate subconscious thought is *"What am I craving today?"*. **Cravio** captures that universal appetite in two punchy, memorable syllables (`Cra-vi-o`).
+- **Catchy & Creative**: Friendly, energetic, and modern—similar to leading global platforms like Swiggy, Zomato, or Deliveroo.
+- **Humanized & Warm**: Directly invites diners to satisfy their cravings with fine food cooked to order.
 
 ---
 
 ## 👨‍💻 Developer Information
-- **Lead Developer**: **SHIKHAR SINGH RANA**
-- **Role**: Lead Full-Stack Web Developer & UI/UX Architect
+
+- **Lead Developer & Architect**: **SHIKHAR SINGH RANA**
+- **Role**: Full-Stack Web Developer & UI/UX Architect
 - **Special Creator Promo Code**: Use voucher **`SHIKHAR`** at checkout for flat **₹100 Off**!
 
 ---
 
-## 🌟 Key Features
+## 🌟 Core Features & Technical Capabilities
 
-1. **Gourmet Dataset**: 39 meticulously curated items with calorie counts, preparation time, allergen warnings, spice level ratings, and ingredient lists.
-2. **Dynamic In-Card Steppers**: Cards transform their "Add" button into interactive `[-] [qty] [+]` steppers when added to the cart.
-3. **Interactive Live Delivery Tracker**: 4-stage order status stepper with an **animated HTML5 Canvas GPS map** simulating a courier vehicle traveling from the kitchen to the customer's address.
-4. **Web Audio API Sound Effects**: Synthesized crystalline chimes for adding items, applying discount vouchers, and order confirmation.
-5. **Particle Canvas Confetti**: Custom celebratory burst upon checkout completion.
-6. **LocalStorage Persistence**: Cart, Wishlist favorites, order history, applied vouchers, tips, and dark/light theme preferences remain saved across browser reloads.
-7. **Desktop & Mobile Responsive Layout**: Full desktop wide grid alongside mobile phone bottom navigation bar with safe-area spacing.
+1. **Brand Mascot Logo**: Smiling **"C"** vector mark with a tilted chef's toque hat and a flavor sparkle star.
+2. **Indian Rupee (₹) Pricing**: Real-world gourmet pricing across 8 categories (pizzas, burgers, ramen, bowls, desserts, viral bites).
+3. **Dynamic In-Card Steppers**: Food cards seamlessly morph their "Add" button into interactive `[-] [qty] [+]` steppers when added to cart.
+4. **Live Order Tracking Modal**: 4-stage order stepper with an **animated HTML5 Canvas GPS map** simulating a courier vehicle traveling in real-time.
+5. **Sound Effects (Web Audio API)**: Synthesized audio chimes for adding items, applying coupons, and placing orders.
+6. **Confetti Celebration Engine**: Canvas-based particle explosion upon successful checkout.
+7. **LocalStorage Persistence**: Cart, Wishlist, vouchers, customer profile, and dark/light mode stay synced across page reloads.
+8. **100% Responsive Layout**: Dedicated desktop and mobile phone designs with zero layout breakage.
 
 ---
 
-## 🎟️ Active Voucher Codes (in ₹)
+## 📁 Repository Structure
 
-| Voucher Code | Benefit | Minimum Order |
+```
+cravio-food-delivery/
+├── index.html              # Semantic HTML master document, dialog modals, drawers
+├── package.json            # Project scripts and metadata
+├── README.md               # Documentation and visual screenshot walkthrough
+├── server.py               # Zero-cache local Python HTTP server
+├── css/
+│   ├── style.css           # Design tokens, color palettes, typography, buttons
+│   ├── components.css      # Hero, Kitchen cards, Food cards, Drawers, Modals, Toasts
+│   └── responsive.css      # Mobile breakpoints and mobile bottom navigation bar
+├── js/
+│   ├── data.js             # Master dataset in ₹ (kitchens, dishes, promo vouchers)
+│   ├── state.js            # Reactive pub/sub state manager & LocalStorage engine
+│   ├── utils.js            # Indian Rupee formatter, Web Audio chimes, Toast alerts
+│   ├── components.js       # Dynamic UI card & stepper renderers
+│   ├── tracker.js          # Live GPS order tracker & Canvas route animator
+│   └── app.js              # Application controller, search, filters & checkout
+├── screenshot/             # High-resolution UI captures (10 views)
+└── screenshots/            # Screenshot mirror directory for standard GitHub naming
+```
+
+---
+
+## 🎟️ Active Promo Codes (in ₹)
+
+| Voucher Code | Discount Benefit | Min Order |
 | :--- | :--- | :--- |
 | **`SHIKHAR`** | **Flat ₹100 Off** (Developer's Special) | ₹399 |
-| **`TREND20`** | **20% Off** on trending pizzas, specialty brews & biryanis | ₹699 |
-| **`ROYAL20`** | **20% Off** on royal Awadhi & Mughlai feasts | ₹699 |
-| **`FREEDEL`** | **Free Delivery** (White-Glove Thermal Courier) | ₹499 |
-| **`GRAND150`** | **Flat ₹150 Off** on luxury banquets | ₹899 |
+| **`CHEF20`** | **20% Off** on fine dining | ₹699 |
+| **`FREEDEL`** | **Free Delivery** (Thermal Courier) | ₹499 |
+| **`MAGNIFIC`** | **Flat ₹150 Off** on luxury dining | ₹899 |
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 Running the Project Locally
 
-### 🌐 1. Live Server
-Run the local server:
 ```bash
-python3 server.py
-```
-Open in your browser:
-👉 **[http://localhost:8081](http://localhost:8081)**
+# Clone the repository
+git clone https://github.com/shikharsinghrana0-hash/cravio-food-delivery.git
+cd cravio-food-delivery
 
-### 📂 2. Direct File Access
-Open [index.html](file:///Users/shikharsinghrana/Documents/delivery%20site/index.html) directly in any modern web browser.
+# Run the local server
+python3 server.py
+# or
+npm start
+```
+Open **[http://localhost:8080](http://localhost:8080)** in your browser.
