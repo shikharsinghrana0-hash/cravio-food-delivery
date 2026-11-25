@@ -79,7 +79,7 @@
         <input 
           type="search" 
           class="search-food-input" 
-          placeholder="What are you craving? Pizza, wagyu, ramen..." 
+          placeholder="What are you craving? Sourdough pizza, Spanish latte, biryani..." 
           aria-label="Search culinary items"
         />
       </div>
@@ -139,21 +139,21 @@
         <div class="hero-badge-pill">
           <span>✨ What are you craving today?</span>
           <span class="dot-separator">•</span>
-          <span>Bukhara &amp; Dum Pukht Heritage</span>
+          <span>Royal Indian &amp; Trending Artisanal Bestsellers</span>
         </div>
 
         <h1 class="hero-title">
-          Craving Royal Flavors? <span class="serif-italic">Delivered Hot in 24 Mins</span>.
+          Craving Royal Flavors or Trending Bites? <span class="serif-italic">Delivered Hot in 24 Mins</span>.
         </h1>
 
         <p class="hero-subtitle">
-          From slow-dum Awadhi mutton biryanis, velvety 24-hour Dal Bukhara, and charcoal-grilled tandoori kebabs 
-          to crispy ghee roast dosas and artisanal Chandni Chowk mithai. Separated into Pure Veg and Non-Veg royal menus.
+          From slow-dum Awadhi biryanis, 24-hour Dal Bukhara, and charcoal tandoor kebabs to artisan sourdough pizzas, 
+          Spanish pistachio lattes, and viral Korean brioche. Distinctly segregated into 🟢 Pure Veg and 🔴 Non-Veg menus.
         </p>
 
         <div class="hero-cta-group">
           <a href="#menu-section" class="btn btn-primary">
-            <span>Explore Royal Menu</span>
+            <span>Explore Menu &amp; Trending</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -266,9 +266,9 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <span class="section-tag">🇮🇳 Royal Indian Culinary Traditions</span>
-          <h2 class="section-title">Explore Indian Delicacies (in ₹)</h2>
-          <p class="section-subtitle">Authentic Awadhi dum handis, tandoor kebabs, desi ghee curries, and traditional mithai with distinct Pure Veg and Non-Veg selections.</p>
+          <span class="section-tag">🇮🇳 Royal Traditions &amp; Trending Favorites</span>
+          <h2 class="section-title">Explore Gourmet Delicacies (in ₹)</h2>
+          <p class="section-subtitle">Artisan sourdough pizzas, specialty coffees, viral bites, and authentic Awadhi dum handis with separated Pure Veg and Non-Veg selections.</p>
         </div>
       </div>
 
@@ -294,7 +294,7 @@
             <input 
               type="search" 
               class="search-food-input" 
-              placeholder="Search biryani, paneer, kebabs..." 
+              placeholder="Search sourdough pizza, pistachio latte, biryani..." 
               aria-label="Filter dishes"
             />
           </div>
@@ -315,7 +315,10 @@
           <!-- Dietary Filter Dropdown -->
           <select id="dietary-filter" class="filter-select" aria-label="Filter by dietary preference">
             <option value="all">Dietary: All Profiles</option>
-            <option value="Bestseller">Bestsellers</option>
+            <option value="Trending">Viral &amp; Trending 🔥</option>
+            <option value="Sourdough">Artisan Sourdough 🍕</option>
+            <option value="Specialty Coffee">Specialty Coffee ☕</option>
+            <option value="Bestseller">Bestsellers ⭐</option>
             <option value="Tandoori">Clay Tandoori</option>
             <option value="Saffron Dum">Saffron Dum</option>
             <option value="High Protein">High Protein</option>
@@ -408,20 +411,21 @@
           <ul class="footer-links">
             <li><a href="#restaurants-section" onclick="App.filterByRestaurant('bukhara')">Bukhara &amp; Dum Pukht Heritage</a></li>
             <li><a href="#restaurants-section" onclick="App.filterByRestaurant('sattvik')">Sattvik Shakahari Haveli (100% Veg)</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('crustcraft')">Crust &amp; Craft Sourdough Atelier</a></li>
+            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('roastery')">Third Wave Roastery &amp; Brew Lab</a></li>
             <li><a href="#restaurants-section" onclick="App.filterByRestaurant('dastan')">Dastan Kebab &amp; Tandoor Atelier</a></li>
             <li><a href="#restaurants-section" onclick="App.filterByRestaurant('punjab')">Punjab Grill &amp; Dhaba Luxe</a></li>
-            <li><a href="#restaurants-section" onclick="App.filterByRestaurant('dakshin')">Dakshin Coastal &amp; Spice Villa</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-title">Indian Specialties</h4>
+          <h4 class="footer-title">Cravio Cravings</h4>
           <ul class="footer-links">
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'trending')">Viral Trending Bites 🔥</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'pizza')">Sourdough Pizzas (from ₹469)</a></li>
+            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'coffee')">Specialty Coffees &amp; Brews (from ₹249)</a></li>
             <li><a href="#menu-section" onclick="window.state.setFilter('category', 'biryani')">Awadhi Dum Biryani (from ₹419)</a></li>
             <li><a href="#menu-section" onclick="window.state.setFilter('category', 'tandoor')">Tandoori Kebabs &amp; Tikkas (from ₹339)</a></li>
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'curries')">Royal Curries &amp; Dal (from ₹379)</a></li>
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'southindian')">Mysore Ghee Roast Dosas (from ₹279)</a></li>
-            <li><a href="#menu-section" onclick="window.state.setFilter('category', 'desserts')">Kesar Mithai &amp; Rasmalai (from ₹229)</a></li>
           </ul>
         </div>
 

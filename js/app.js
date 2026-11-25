@@ -926,8 +926,8 @@ const App = {
       if (e.target.closest("#btn-reset-filters")) {
         window.state.resetFilters();
         this.renderCategories();
-        if (priceSlider) priceSlider.value = 750;
-        if (priceDisplay) priceDisplay.textContent = "₹750";
+        if (priceSlider) priceSlider.value = 800;
+        if (priceDisplay) priceDisplay.textContent = "₹800";
         if (sortSelect) sortSelect.value = "recommended";
         if (dietarySelect) dietarySelect.value = "all";
         searchInputs.forEach(i => (i.value = ""));

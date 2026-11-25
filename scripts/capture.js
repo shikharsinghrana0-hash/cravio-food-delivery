@@ -105,6 +105,20 @@ async function capture() {
   await new Promise(r => setTimeout(r, 800));
   await page.screenshot({ path: path.join(OUTPUT_DIR, '09-mobile-iphone-menu.png') });
 
+  // 10. Trending & Artisan Sourdough Pizzas View (Desktop)
+  console.log('Capturing Trending Pizzas & Coffees view...');
+  await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 2 });
+  await page.goto('http://localhost:8081', { waitUntil: 'networkidle0', timeout: 30000 });
+  await page.evaluate(() => {
+    if (window.state && window.state.setFilter) {
+      window.state.setFilter('category', 'trending');
+    }
+    const el = document.getElementById('menu-section');
+    if (el) el.scrollIntoView();
+  });
+  await new Promise(r => setTimeout(r, 800));
+  await page.screenshot({ path: path.join(OUTPUT_DIR, '10-trending-and-pizzas.png') });
+
   console.log('All screenshots captured successfully!');
   await browser.close();
 }
