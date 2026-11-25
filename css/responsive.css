@@ -112,6 +112,17 @@
   .hero-visual-card {
     max-width: 580px;
     margin: 0 auto;
+    overflow: visible;
+  }
+
+  .card-top-left {
+    left: 8px;
+    top: 12px;
+  }
+
+  .card-bottom-right {
+    right: 8px;
+    bottom: 12px;
   }
 
   .hero-main-photo {
