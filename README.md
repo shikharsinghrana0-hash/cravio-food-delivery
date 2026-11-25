@@ -28,7 +28,7 @@ All high-resolution application screenshots are saved in the [`screenshot/`](./s
 
 ## 🍕 Trending Foods, Artisan Pizzas & Specialty Coffees
 
-Cravio features a hand-curated menu of 41 gourmet creations (24 Pure Veg, 17 Non-Veg) across 11 categories:
+Cravio features a hand-curated menu of 39 gourmet creations (24 Pure Veg, 15 Non-Veg) across 11 categories:
 
 ### 🍕 Artisan Sourdough Pizzas
 - **Truffle Burrata & Wild Mushroom Sourdough Pizza (🟢 Veg)**: 48h slow-fermented wild sourdough, whole fresh burrata, black summer truffle oil, roasted wild shiitake, and San Marzano tomatoes.
@@ -82,7 +82,7 @@ Cravio features a hand-curated menu of 41 gourmet creations (24 Pure Veg, 17 Non
 
 ## 🌟 Key Features
 
-1. **Gourmet Dataset**: 41 meticulously curated items with calorie counts, preparation time, allergen warnings, spice level ratings, and ingredient lists.
+1. **Gourmet Dataset**: 39 meticulously curated items with calorie counts, preparation time, allergen warnings, spice level ratings, and ingredient lists.
 2. **Dynamic In-Card Steppers**: Cards transform their "Add" button into interactive `[-] [qty] [+]` steppers when added to the cart.
 3. **Interactive Live Delivery Tracker**: 4-stage order status stepper with an **animated HTML5 Canvas GPS map** simulating a courier vehicle traveling from the kitchen to the customer's address.
 4. **Web Audio API Sound Effects**: Synthesized crystalline chimes for adding items, applying discount vouchers, and order confirmation.

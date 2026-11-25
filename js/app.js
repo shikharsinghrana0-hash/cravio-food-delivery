@@ -65,8 +65,16 @@ const App = {
     if (!container) return;
 
     const currentCat = window.state.filters.category;
+    const counts = { all: APP_DATA.foodItems.length };
+    APP_DATA.foodItems.forEach(f => {
+      counts[f.category] = (counts[f.category] || 0) + 1;
+    });
+
     container.innerHTML = APP_DATA.categories
-      .map(cat => Components.renderCategoryPill(cat, cat.id === currentCat))
+      .map(cat => {
+        const dynamicCat = { ...cat, count: counts[cat.id] ?? cat.count };
+        return Components.renderCategoryPill(dynamicCat, cat.id === currentCat);
+      })
       .join("");
   },
 
