@@ -45,8 +45,8 @@ async function capture() {
   // Add a couple items to cart via quickAddToCart
   await page.evaluate(() => {
     if (window.App && window.App.quickAddToCart) {
-      window.App.quickAddToCart('ind-veg-01');
-      window.App.quickAddToCart('ind-nv-01');
+      window.App.quickAddToCart('piz-veg-01');
+      window.App.quickAddToCart('trn-veg-02');
       window.App.openCartDrawer();
     }
   });
