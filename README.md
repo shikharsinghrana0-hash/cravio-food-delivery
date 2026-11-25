@@ -12,39 +12,39 @@ Built with pure, modern HTML5, CSS3 tokens, and modular vanilla ES6+ JavaScript.
 
 ## 📸 Screenshots Gallery
 
-All visual assets and high-resolution interface captures are available in the [`screenshots/`](./screenshots/) and [`screenshot/`](./screenshot/) folders.
+All visual assets and high-resolution interface captures of the **currently running live website** are available in the [`screenshot/`](./screenshot/) folder.
 
 ### 1. Desktop Experience & Hero Banner
 *Captures brand mascot logo, live delivery hub zone, headline, quick search bar, and key trust metrics.*
-![Desktop Hero & Navigation](./screenshots/01-desktop-hero.png)
+![Desktop Hero & Navigation](./screenshot/live-01-hero-desktop.png)
 
 ### 2. Partner Kitchens Showcase (ChefDesk, Magnific, Phygital)
 *Curated culinary partners with ratings, tags, delivery estimates, and price indicators.*
-![Partner Kitchens](./screenshots/02-desktop-restaurants.png)
+![Partner Kitchens](./screenshot/live-02-kitchens.png)
 
 ### 3. Food Menu, Category Carousel & Real-Time Filter Toolbar
 *Multi-facet filtering: instant keyword search, category pills, price slider (₹150 - ₹1200), and dietary tags.*
-![Food Menu & Filters](./screenshots/03-desktop-food-menu.png)
+![Food Menu & Filters](./screenshot/live-03-menu-filters.png)
 
 ### 4. Interactive Slide-Out Cart Drawer
 *Dynamic item stepper (`- [qty] +`), promo voucher applicator, chef note input, and live ₹ order calculation.*
-![Cart Drawer](./screenshots/04-desktop-cart-drawer.png)
+![Cart Drawer](./screenshot/live-04-cart-drawer.png)
 
 ### 5. Live GPS Order Tracking with Canvas 2D Route Simulation
 *Real-time 4-stage stepper, animated courier driver route across city road network, and driver contact cards.*
-![Order Tracking](./screenshots/05-live-order-tracking.png)
+![Order Tracking](./screenshot/live-05-order-tracking.png)
 
 ### 6. Mobile iPhone Experience with Fixed Bottom Navigation Bar
 *Fully responsive on mobile phones (≤640px) featuring a thumb-friendly glassmorphic 5-tab bottom navigation.*
 <p align="center">
-  <img src="./screenshots/08-mobile-iphone-homepage.png" width="45%" alt="Mobile Homepage" />
+  <img src="./screenshot/live-08-mobile-homepage.png" width="45%" alt="Mobile Homepage" />
   &nbsp;&nbsp;
-  <img src="./screenshots/09-mobile-iphone-menu.png" width="45%" alt="Mobile Menu" />
+  <img src="./screenshot/live-09-mobile-menu.png" width="45%" alt="Mobile Menu" />
 </p>
 
 ### 7. Clean Developer & Architect Attribution
 *Presented at the very end of the page ("at last") with clean typography and no clutter.*
-![Footer Attribution](./screenshots/06-footer-developer-attribution.png)
+![Footer Attribution](./screenshot/live-06-footer-attribution.png)
 
 ---
 
@@ -96,8 +96,8 @@ cravio-food-delivery/
 │   ├── components.js       # Dynamic UI card & stepper renderers
 │   ├── tracker.js          # Live GPS order tracker & Canvas route animator
 │   └── app.js              # Application controller, search, filters & checkout
-├── screenshot/             # High-resolution UI captures (10 views)
-└── screenshots/            # Screenshot mirror directory for standard GitHub naming
+├── screenshot/             # High-resolution UI captures of the running live site (10 views)
+└── server.py               # Zero-cache local Python HTTP server
 ```
 
 ---
